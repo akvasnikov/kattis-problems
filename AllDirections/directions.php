@@ -150,7 +150,7 @@ class Directions
      * @param array $point
      * @return array
      */
-    public function getPoint(string $command, $parameter, array $point)
+    private function getPoint(string $command, $parameter, array $point)
     {
         // Gets changes in coordinates
         if ($command == 'turn' || $command == 'start') {
@@ -169,7 +169,7 @@ class Directions
      * @param $endPoint
      * @return float
      */
-    public function getDistance(array $point, array $endPoint)
+    private function getDistance(array $point, array $endPoint)
     {
         $distance = sqrt(pow(($point[0] - $endPoint[0]), 2) + pow(($point[1] - $endPoint[1]), 2));
         return $distance;
